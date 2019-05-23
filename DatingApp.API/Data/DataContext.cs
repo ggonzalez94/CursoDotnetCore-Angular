@@ -11,5 +11,6 @@ namespace DatingApp.API.Data
         }
 
         public DbSet<Value> Values { get; set; } //Values va a ser el nombre de la tabla
+        public DbSet<User> Users { get; set; }
     }
 }
