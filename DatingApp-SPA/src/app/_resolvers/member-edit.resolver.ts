@@ -11,6 +11,7 @@ import { AuthService } from '../_services/auth.service';
 export class MemberEditResolver implements Resolve<User> {
     constructor(private userService: UserService, private authservice: AuthService,
          private router: Router, private alertify: AlertifyService) {}
+         
     resolve(route: ActivatedRouteSnapshot): Observable<User> {
         return this.userService.getUser(this.authservice.decodedToken.nameid).pipe(
             catchError(error => {
